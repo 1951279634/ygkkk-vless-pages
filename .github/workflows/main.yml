@@ -1,0 +1,46 @@
+name: Daily Fetch _worker.js
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch_and_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Download _worker.js
+      run: |
+        REPO_OWNER="yonggekkk"
+        REPO_NAME="Cloudflare_vless_trojan"
+        FILE_PATH="Vless_workers_pages/_worker.js"
+        RAW_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/${FILE_PATH}"
+
+        echo "Attempting to download: ${RAW_URL}"
+        curl -o _worker.js "${RAW_URL}"
+
+        if [ $? -ne 0 ]; then
+          echo "Error: Failed to download the file."
+          exit 1
+        fi
+        echo "File downloaded successfully to _worker.js"
+
+    - name: Commit and push if changed
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add _worker.js
+        git diff --staged --quiet || (git commit -m "chore: Update _worker.js from upstream (Vless)" && git push)
+        echo "Finished commit and push step."
