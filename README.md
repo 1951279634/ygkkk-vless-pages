@@ -99,5 +99,5 @@ JSON
 
 ---
 ### 感谢你右上角的star🌟
-[![Stargazers over time](https://github.com/nickbrown233/ygkkk-vless-pages.svg)](https://starchart.cc/nickbrown233/ygkkk-vless-pages)
-------------------------------------------------------------------------
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/nickbrown233/ygkkk-vless-pages.svg?variant=adaptive)](https://starchart.cc/nickbrown233/ygkkk-vless-pages)
