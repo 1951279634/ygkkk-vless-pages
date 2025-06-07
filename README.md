@@ -6,7 +6,7 @@
 
 ## 项目作用
 
-本项目旨在提供一个便捷的解决方案，帮助你将 [甬哥的 Cloudflare VLESS 项目](https://github.com/YourUsername/YourProjectName)（请将此链接替换为实际链接，如果知道的话）轻松部署到 Cloudflare Pages。通过这种方式，你可以利用 Cloudflare 强大的全球网络和免费的 Pages 服务来承载你的 VLESS 服务。
+本项目旨在提供一个便捷的解决方案，帮助你将 [甬哥的 Cloudflare VLESS 项目](https://github.com/yonggekkk/Cloudflare_vless_trojan)轻松部署到 Cloudflare Pages。通过这种方式，你可以利用 Cloudflare 强大的全球网络和免费的 Pages 服务来承载你的 VLESS 服务。
 
 ---
 
@@ -28,7 +28,6 @@
 点击“部署站点”。
 Cloudflare Pages 将会自动拉取你的仓库代码，并进行部署。部署完成后，你将获得一个可以访问 VLESS 服务的 Cloudflare Pages 域名。
 
-VLESS 配置示例 (可选)
 以下是一个示例 VLESS 配置代码块。请注意，你需要根据甬哥项目的具体代码和你的实际需求替换或填充这部分内容。如果配置是作为文件而不是直接写入，你应该指导用户如何找到并配置这些文件。
 
 JSON
